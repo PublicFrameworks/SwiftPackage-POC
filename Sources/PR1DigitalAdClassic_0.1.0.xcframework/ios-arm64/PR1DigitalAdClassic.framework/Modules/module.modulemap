@@ -1,0 +1,6 @@
+framework module PR1DigitalAdClassic {
+  umbrella header "PR1DigitalAdClassic.h"
+  export *
+
+  module * { export * }
+}

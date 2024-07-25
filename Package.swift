@@ -5,6 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "PR1DigitalAdClassic",
+    platforms: [
+        .iOS(.v13)
+    ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
@@ -14,10 +17,9 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
-        .target(
-            name: "PR1DigitalAdClassic"),
-        .testTarget(
-            name: "PR1DigitalAdClassicTests",
-            dependencies: ["PR1DigitalAdClassic"]),
+        .binaryTarget(
+            name: "PR1DigitalAdClassic",
+            path: "Sources/PR1DigitalAdClassic_0.1.0.xcframework"
+        )
     ]
 )
